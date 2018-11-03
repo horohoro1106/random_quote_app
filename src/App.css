@@ -1,0 +1,32 @@
+html,body {
+  margin:0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffeead;
+}
+* {
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 30px auto;
+  border-radius: 4px;
+  background-color: #96ceb4;
+  padding: 10px 0 25px;
+}
+.App-button {
+  margin: 0 50px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  background-color: #ffcc5c;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.twitter-share-button {
+  text-decoration: none;
+  color: #000;
+}
