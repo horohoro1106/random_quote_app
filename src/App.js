@@ -16,14 +16,21 @@ class App extends Component {
     this.getQuote();
   }
   async getQuote() {
-    const url = "https://talaikis.com/api/quotes/random/";
-     await fetch(url)
+    const url = "https://andruxnet-random-famous-quotes.p.mashape.com/";
+    const options = {
+      headers: {
+      "X-Mashape-Key" : "gykKWqNh8SmshAVOkTN5PBc51ElDp10cE0wjsnI8xdo6XWX0mA",
+      "Accept": "application/json"
+      }
+    }
+     await fetch(url,options)
        .then(response=>response.json())
-       .then(data=>
+       .then(json=> {
+      let data = json[0];
     this.setState(()=> ({
       quote: data.quote,
       author: data.author
-    })));
+    }))});
   }
 
   render() {
